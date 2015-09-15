@@ -14,6 +14,10 @@
 		5BDF48EC1BA7B60100116F77 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BDF48EB1BA7B60100116F77 /* Images.xcassets */; };
 		5BDF48EF1BA7B60100116F77 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BDF48ED1BA7B60100116F77 /* LaunchScreen.xib */; };
 		5BDF48FB1BA7B60100116F77 /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDF48FA1BA7B60100116F77 /* ____Tests.m */; };
+		5BDF490D1BA7B60F00116F77 /* YWCBottomScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDF49061BA7B60F00116F77 /* YWCBottomScrollView.m */; };
+		5BDF490E1BA7B60F00116F77 /* YWCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDF49081BA7B60F00116F77 /* YWCMainViewController.m */; };
+		5BDF490F1BA7B60F00116F77 /* YWCTitleVCModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDF490A1BA7B60F00116F77 /* YWCTitleVCModel.m */; };
+		5BDF49101BA7B60F00116F77 /* YWCTopScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDF490C1BA7B60F00116F77 /* YWCTopScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,14 @@
 		5BDF48F41BA7B60100116F77 /* 网易首页Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "网易首页Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BDF48F91BA7B60100116F77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BDF48FA1BA7B60100116F77 /* ____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____Tests.m"; sourceTree = "<group>"; };
+		5BDF49051BA7B60F00116F77 /* YWCBottomScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWCBottomScrollView.h; sourceTree = "<group>"; };
+		5BDF49061BA7B60F00116F77 /* YWCBottomScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWCBottomScrollView.m; sourceTree = "<group>"; };
+		5BDF49071BA7B60F00116F77 /* YWCMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWCMainViewController.h; sourceTree = "<group>"; };
+		5BDF49081BA7B60F00116F77 /* YWCMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWCMainViewController.m; sourceTree = "<group>"; };
+		5BDF49091BA7B60F00116F77 /* YWCTitleVCModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWCTitleVCModel.h; sourceTree = "<group>"; };
+		5BDF490A1BA7B60F00116F77 /* YWCTitleVCModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWCTitleVCModel.m; sourceTree = "<group>"; };
+		5BDF490B1BA7B60F00116F77 /* YWCTopScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWCTopScrollView.h; sourceTree = "<group>"; };
+		5BDF490C1BA7B60F00116F77 /* YWCTopScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWCTopScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +75,7 @@
 		5BDF48D21BA7B60100116F77 = {
 			isa = PBXGroup;
 			children = (
+				5BDF49041BA7B60F00116F77 /* ViewPagerIndicator */,
 				5BDF48DD1BA7B60100116F77 /* 网易首页 */,
 				5BDF48F71BA7B60100116F77 /* 网易首页Tests */,
 				5BDF48DC1BA7B60100116F77 /* Products */,
@@ -117,6 +130,21 @@
 				5BDF48F91BA7B60100116F77 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5BDF49041BA7B60F00116F77 /* ViewPagerIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				5BDF49051BA7B60F00116F77 /* YWCBottomScrollView.h */,
+				5BDF49061BA7B60F00116F77 /* YWCBottomScrollView.m */,
+				5BDF49071BA7B60F00116F77 /* YWCMainViewController.h */,
+				5BDF49081BA7B60F00116F77 /* YWCMainViewController.m */,
+				5BDF49091BA7B60F00116F77 /* YWCTitleVCModel.h */,
+				5BDF490A1BA7B60F00116F77 /* YWCTitleVCModel.m */,
+				5BDF490B1BA7B60F00116F77 /* YWCTopScrollView.h */,
+				5BDF490C1BA7B60F00116F77 /* YWCTopScrollView.m */,
+			);
+			path = ViewPagerIndicator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,9 +247,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BDF49101BA7B60F00116F77 /* YWCTopScrollView.m in Sources */,
+				5BDF490E1BA7B60F00116F77 /* YWCMainViewController.m in Sources */,
 				5BDF48E71BA7B60100116F77 /* ViewController.m in Sources */,
 				5BDF48E41BA7B60100116F77 /* AppDelegate.m in Sources */,
+				5BDF490D1BA7B60F00116F77 /* YWCBottomScrollView.m in Sources */,
 				5BDF48E11BA7B60100116F77 /* main.m in Sources */,
+				5BDF490F1BA7B60F00116F77 /* YWCTitleVCModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

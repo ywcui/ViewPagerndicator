@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "YWCTitleVCModel.h"
+#import "YWCMainViewController.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +19,22 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    NSArray *titles=@[@"科技",@"社会",@"历史",@"新闻",@"财经",@"股市",@"纪录片",@"教育"];
+    YWCMainViewController *mainVc=[[YWCMainViewController alloc]init];
+    for (int i=0; i<titles.count; i++) {
+        YWCTitleVCModel *titleVcModel=[[YWCTitleVCModel alloc]init];
+        titleVcModel.title=[titles objectAtIndex:i];
+        
+        ViewController *vc=[[ViewController alloc]init];
+        vc.view.backgroundColor=i%2?[UIColor redColor]:[UIColor blueColor];
+        titleVcModel.viewController=vc;
+        [mainVc.titleVcModelArray addObject:titleVcModel];
+    }
+    self.window.rootViewController=mainVc;
+    self.window.backgroundColor=[UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+
     return YES;
 }
 
